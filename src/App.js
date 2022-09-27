@@ -1,4 +1,6 @@
 import './App.css';
+// Importing Components
+import Form from "./components/form";
 
 function App() {
   return (
@@ -6,6 +8,7 @@ function App() {
       <header>
         <h1>Suliman's Todo List</h1>
       </header>
+      <Form />
     </div>
   );
 }

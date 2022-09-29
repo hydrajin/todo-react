@@ -1,6 +1,8 @@
+import React, { useState } from "react";
 import './App.css';
 // Importing Components
 import Form from "./components/form";
+import Todolist from "./components/TodoList";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
         <h1>Suliman's Todo List</h1>
       </header>
       <Form />
+      <Todolist />
     </div>
   );
 }

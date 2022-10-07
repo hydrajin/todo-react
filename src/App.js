@@ -5,6 +5,7 @@ import Form from "./components/form";
 import Todolist from "./components/TodoList";
 
 function App() {
+  const [inputText, setInputText] = useState("");
   return (
     <div className="App">
       <header>

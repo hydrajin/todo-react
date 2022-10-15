@@ -7,8 +7,14 @@ const Todolist = (props) => {
   return (
   <div className="todo-container">
     <ul className="todo-list">
-      {props.todos.map(todos =>(
-        <Todo text={todos.text} />
+      {props.todos.map(todo =>(
+        <Todo 
+          key={todo.id}
+          text={todo.text}
+          setTodos={props.setTodos}
+          todos={props.todos}
+          todo={todo}
+        />
       ))}
     </ul>
   </div>

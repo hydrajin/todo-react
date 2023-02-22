@@ -4,12 +4,15 @@ import { React } from 'react';
 function Form(props) {
   // We want to console.log the event-> target -> input (nested objects)
   const inputTextHandler = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     props.setInputText(e.target.value)
   }
   const submitTodoHandler = (e) => {
     e.preventDefault();
-    props.setTodos([...props.todos, { text: props.inputText, completed: false, id: Math.random() * 1000}]);
+    const trimmedText = props.inputText.trim();
+    if (trimmedText !== "") {
+      props.setTodos([...props.todos, { text: trimmedText, completed: false, id: Math.random() * 1000}]);
+    }
     props.setInputText("");
   };
   const statusHandler = (e) => {

@@ -3,11 +3,12 @@ import React from "react";
 import Todo from "./Todo";
 
 const Todolist = (props) => {
-  console.log(props.todos);
+  // console.log(props.todos);
+  // console.log(props.filteredTodos);
   return (
   <div className="todo-container">
     <ul className="todo-list">
-      {props.filteredTodos.map(todo =>(
+      {props.filteredTodos.map(todo => (
         <Todo 
           key={todo.id}
           text={todo.text}
